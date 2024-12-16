@@ -92,56 +92,42 @@
 2. **Потенциальная энергия**:
    
    Потенциальная энергия (при выборе нуля на краю чаши, где $z=0$):
-   $
-   V = mgz = mg(-R_{\text{eff}}\cos\theta) = -mg R_{\text{eff}}\cos\theta.
-   $
+   $V = mgz = mg(-R_{\text{eff}}\cos\theta) = -mg R_{\text{eff}}\cos\theta.$
 
 3. **Кинетическая энергия без проскальзывания**:
 
    Для однородного шара без проскальзывания кинетическая энергия $T$:
-   $
-   T = \frac{7}{10} m (R_{\text{eff}}^2) (\dot{\theta}^2 + \sin^2\theta \dot{\varphi}^2).
-   $
+   $T = \frac{7}{10} m (R_{\text{eff}}^2) (\dot{\theta}^2 + \sin^2\theta \dot{\varphi}^2).$
 
    Здесь использовано, что момент инерции шара $I = \tfrac{2}{5} m r^2$, а при качении без проскальзывания скорость центра связана с угловыми скоростями по $\theta$ и $\varphi$ так, что суммарная кинетическая энергия учитывается с коэффициентом $\frac{7}{10}$.
 
 4. **Уравнение движения по $\theta$ без трения**:
 
    Из уравнений Лагранжа выводится уравнение второго порядка для $\theta(t)$:
-   $
-   \ddot{\theta} = \sin\theta \cos\theta \dot{\varphi}^2 - \frac{5}{7}\frac{g}{R_{\text{eff}}}\sin\theta.
-   $
+   $\ddot{\theta} = \sin\theta \cos\theta \dot{\varphi}^2 - \frac{5}{7}\frac{g}{R_{\text{eff}}}\sin\theta.$
 
    Данное уравнение получено при условии сохранения момента вокруг оси и отсутствия трения.
 
 5. **Учет демпфирования (трения)**:
 
    Чтобы шар со временем остановился, вводим демпфирование. Добавим линейный демпфирующий член по $\theta$:
-   $
-   \ddot{\theta} = \sin\theta\cos\theta \dot{\varphi}^2 - \frac{5}{7}\frac{g}{R_{\text{eff}}}\sin\theta - \gamma_{\theta}\dot{\theta}.
-   $
+   $\ddot{\theta} = \sin\theta\cos\theta \dot{\varphi}^2 - \frac{5}{7}\frac{g}{R_{\text{eff}}}\sin\theta - \gamma_{\theta}\dot{\theta}.$
 
    Здесь $\gamma_{\theta}>0$ — коэффициент демпфирования по углу $\theta$.
 
    Для угла $\varphi$ нет простого уравнения сохранения момента, поэтому вводим экспоненциальное затухание $\dot{\varphi}$:
-   $
-   \dot{\varphi} \leftarrow \dot{\varphi}(1 - \gamma_{\varphi}\Delta t),
-   $
+   $\dot{\varphi} \leftarrow \dot{\varphi}(1 - \gamma_{\varphi}\Delta t),$
    где $\gamma_{\varphi}>0$ — коэффициент демпфирования по $\varphi$.
 
 6. **Скорость шара**:
 
    Линейная скорость центра масс шара:
-   $
-   v = R_{\text{eff}}\sqrt{\dot{\theta}^2 + \sin^2\theta \dot{\varphi}^2}.
-   $
+   $v = R_{\text{eff}}\sqrt{\dot{\theta}^2 + \sin^2\theta \dot{\varphi}^2}.$
 
 7. **Условия остановки**:
 
    Когда шар достигает дна чаши, $\theta \approx 0$, и при достаточном трении $\dot{\theta}\to 0$ и $\dot{\varphi}\to 0$. Когда:
-   $
-   \theta < \varepsilon_\theta, \quad |\dot{\theta}|<\varepsilon_{\dot{\theta}}, \quad |\dot{\varphi}|<\varepsilon_{\dot{\varphi}},
-   $
+   $\theta < \varepsilon_\theta, \quad |\dot{\theta}|<\varepsilon_{\dot{\theta}}, \quad |\dot{\varphi}|<\varepsilon_{\dot{\varphi}},$
    где $\varepsilon_\theta, \varepsilon_{\dot{\theta}}, \varepsilon_{\dot{\varphi}}$ — малые положительные числа, симуляцию можно считать завершённой.
 
 Все эти формулы были использованы последовательно для вывода уравнений движения шара, добавления трения, расчёта скорости и определения условий остановки.
